@@ -43,26 +43,26 @@ const roles = [
 
 const RolesSection = () => {
   return (
-    <section id="roles" className="relative py-24">
-      <div className="section-divider w-full mb-24" />
+    <section id="roles" className="relative py-12 sm:py-20 lg:py-24">
+      <div className="section-divider w-full mb-12 sm:mb-16 lg:mb-24" />
       <div className="absolute inset-0 bg-radial-glow-accent pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             <span className="text-gradient-primary">Role-Based</span> AI Tools
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-full lg:max-w-2xl mx-auto font-light">
             Tailored experiences for every role — all powered by AI.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {roles.map((role, i) => (
             <motion.div
               key={role.title}
@@ -70,19 +70,19 @@ const RolesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12 }}
-              className="glass glass-border rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300"
+              className="glass glass-border rounded-2xl p-6 sm:p-8 hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${role.gradient} flex items-center justify-center shadow-lg`}>
                   <role.icon size={20} className="text-white" />
                 </div>
-                <h3 className="font-display text-xl font-bold">{role.title}</h3>
+                <h3 className="font-display text-base sm:text-xl font-bold">{role.title}</h3>
               </div>
               <p className="text-muted-foreground text-sm mb-6">{role.subtitle}</p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {role.features.map((f) => (
-                  <div key={f.label} className="flex items-center gap-3">
+                  <div key={f.label} className="flex items-center gap-2 sm:gap-3">
                     <div className="w-8 h-8 rounded-lg bg-secondary/80 backdrop-blur-sm flex items-center justify-center shrink-0">
                       <f.icon size={15} className="text-muted-foreground" />
                     </div>
@@ -95,7 +95,7 @@ const RolesSection = () => {
               </div>
 
               {role.highlight && (
-                <p className="text-xs text-accent mt-6 font-medium">+ Includes all Patient features plus management tools</p>
+                <p className="text-xs text-accent mt-4 sm:mt-6 font-medium">+ Includes all Patient features plus management tools</p>
               )}
             </motion.div>
           ))}

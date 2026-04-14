@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 
+const WEB_APP_URL = "https://fancy-kangaroo-36756f.netlify.app/";
+
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -17,12 +19,12 @@ const Navbar = () => {
           <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
           <a href="#roles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">AI Tools</a>
           <a href="#cta" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Download</a>
-          <button className="px-5 py-2 rounded-full glass text-sm font-medium hover:bg-muted/50 transition-colors">
+          <a href="#cta" className="px-5 py-2 rounded-full glass text-sm font-medium hover:bg-muted/50 transition-colors">
             Web Login
-          </button>
-          <button className="px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all shadow-lg shadow-primary/25">
+          </a>
+          <a href="#cta" className="px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all shadow-lg shadow-primary/25">
             Download App
-          </button>
+          </a>
         </div>
 
         <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
@@ -39,9 +41,9 @@ const Navbar = () => {
           <a href="#features" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Features</a>
           <a href="#roles" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>AI Tools</a>
           <a href="#cta" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>Download</a>
-          <button className="px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-semibold w-full">
+          <a href="#cta" className="px-5 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-semibold w-full text-center" onClick={() => setMobileOpen(false)}>
             Download App
-          </button>
+          </a>
         </motion.div>
       )}
     </nav>

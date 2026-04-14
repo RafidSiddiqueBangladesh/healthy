@@ -42,26 +42,26 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative py-24">
-      <div className="section-divider w-full mb-24" />
+    <section id="features" className="relative py-12 sm:py-20 lg:py-24">
+      <div className="section-divider w-full mb-12 sm:mb-16 lg:mb-24" />
       <div className="absolute inset-0 bg-radial-glow pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Intelligent Features for <span className="text-gradient-primary">Smarter Health</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-full lg:max-w-2xl mx-auto font-light">
             Everything you need to manage your health journey, powered by advanced AI and tailored to your goals.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
@@ -69,12 +69,12 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass glass-border rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group"
+              className="glass glass-border rounded-2xl p-6 sm:p-8 hover:scale-[1.02] transition-all duration-300 group"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:shadow-primary/30 transition-shadow`}>
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 sm:mb-5 shadow-lg group-hover:shadow-primary/30 transition-shadow`}>
                 <feature.icon size={22} className="text-white" />
               </div>
-              <h3 className="font-display text-lg font-bold mb-2">{feature.title}</h3>
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
