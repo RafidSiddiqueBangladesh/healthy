@@ -76,7 +76,18 @@ const CTASection = () => {
       {/* Footer */}
       <div className="section-divider w-full mt-12 sm:mt-24" />
       <div className="container mx-auto px-4 sm:px-6 pt-6 sm:pt-8 text-center">
-        <p className="text-xs sm:text-sm text-muted-foreground">© 2026 NutriCare. All rights reserved.</p>
+        <p className="text-xs sm:text-sm text-muted-foreground mb-3">© 2026 NutriCare. All rights reserved.</p>
+        <p className="text-xs sm:text-sm text-muted-foreground">
+          Built by{" "}
+          <a
+            href="https://www.linkedin.com/in/rafid-siddique-3131b9216/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-accent transition-colors font-semibold"
+          >
+            Rafid Siddique
+          </a>
+        </p>
       </div>
 
       {/* Android Message Modal */}
